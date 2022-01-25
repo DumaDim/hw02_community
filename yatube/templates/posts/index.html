@@ -1,0 +1,26 @@
+<!-- templates/posts/index.html -->
+{% extends 'base.html' %}
+{% block title %}
+  {{ title}}
+{% endblock %}
+{% block main %}
+      <div class="container py-5">
+        <h1>{{ title }}</h1>
+{% for post in posts %}
+      <!-- класс py-5 создает отступы сверху и снизу блока -->
+        <article>
+          <ul>
+            <li>
+              Автор: {{ post.author.get_full_name }}
+            </li>
+            <li>
+              Дата публикации: {{ post.pub_date|date:"d E Y" }}
+            </li>
+          </ul>      
+          <p>{{ post.text }}</p>
+          <a href="{% url 'posts:group_list' post.group.slug %}">все записи группы {{ post.group }}</a>
+        </article>
+{% if not forloop.last %}<hr>{% endif %}
+{% endfor %}
+      </div>  
+{% endblock %}
