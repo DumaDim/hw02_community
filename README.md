@@ -1,3 +1,31 @@
-# backend_community_homework
+# hw02_community
+## Описание проекта
+Создание сообщества для публикаций под названием Yatube. Проект будет расширяться с увеличением функционала. На данном этапе выполнены следующие внесения в проект:
+ - Создано и зарегистрировано приложение Posts.
+ - Подключена база данных.
+ - Десять последних записей выводятся на главную страницу.
+ - В админ-зоне доступно управление объектами модели Post: можно публиковать новые записи или редактировать/удалять существующие.
+ - Пользователь может перейти на страницу любого сообщества, где отображаются десять последних публикаций из этой группы.
+ 
+## Технологии
+Python 3.7, Django 2.2, Pytest
 
-[![CI](https://github.com/yandex-praktikum/hw02_community/actions/workflows/python-app.yml/badge.svg?branch=master)](https://github.com/yandex-praktikum/hw02_community/actions/workflows/python-app.yml)
+## Установка проекта из репозитория
+### Шаг 1
+Клонировать репозиторий себе на компьютер
+```bash
+https://github.com/DumaDim/hw02_community.git
+```
+
+### Шаг 2
+Создать и активировать виртуальное окружение
+```bash
+python -m venv venv
+source venv/Scripts/activate
+```
+
+### Шаг 3
+Установить зависимости из файла requirements.txt
+```bash
+pip install -r requirements.txt
+```
